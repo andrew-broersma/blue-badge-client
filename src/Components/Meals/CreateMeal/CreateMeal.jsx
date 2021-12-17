@@ -21,6 +21,7 @@ const CreateMeal = (props) => {
         let urlFoodInput = foodInput.replace(" ", "%20")
         console.log(urlFoodInput);
         const apiKey = process.env.REACT_APP_API_KEY
+        console.log(apiKey)
         const url = `https://api.nal.usda.gov/fdc/v1/foods/search?api_key=${apiKey}&query=${urlFoodInput}`
 
         await fetch(url, {
